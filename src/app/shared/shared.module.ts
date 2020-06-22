@@ -39,6 +39,13 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
+import { HeaderComponent } from './header/header.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { FooterComponent } from './footer/footer.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { SidebarService } from './sidebar/sidebar.service';
 
 const mm = [
   MatAutocompleteModule,
@@ -78,9 +85,10 @@ const mm = [
 ];
 
 @NgModule({
-  imports: [...mm],
-  exports: [...mm],
-  providers: [],
+  imports: [CommonModule, ...mm, FlexLayoutModule, RouterModule],
+  exports: [...mm, HeaderComponent, SidebarComponent, FooterComponent],
+  providers: [SidebarService],
+  declarations: [HeaderComponent, SidebarComponent, FooterComponent],
 })
 export class SharedModule {
   constructor(public matIconRegistry: MatIconRegistry) {

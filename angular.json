@@ -24,7 +24,7 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/powerportal.scss"],
+            "styles": ["src/styles.scss", "src/powerportal.scss"],
             "scripts": []
           },
           "configurations": {

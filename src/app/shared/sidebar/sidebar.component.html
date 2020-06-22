@@ -1,0 +1,75 @@
+<mat-accordion>
+  <mat-expansion-panel class="mat-elevation-z0" [expanded]="true">
+    <mat-expansion-panel-header>
+      Company
+    </mat-expansion-panel-header>
+
+    <mat-nav-list>
+      <!-- <h2 matSubheader>Dashboard Menu</h2>
+      <mat-divider></mat-divider> -->
+      <a
+        mat-list-item
+        routerLinkActive="list-item-active"
+        [routerLink]="['/dashboard/company/profile']"
+        (click)="onItemSelected()"
+      >
+        <mat-icon matListIcon>admin_panel_settings</mat-icon> Profile
+      </a>
+      <a
+        mat-list-item
+        routerLinkActive="list-item-active"
+        [routerLink]="['/dashboard/company/credit']"
+        (click)="onItemSelected()"
+      >
+        <mat-icon matListIcon>credit_card</mat-icon> Credit Risk & Exposure
+      </a>
+
+      <a
+        mat-list-item
+        routerLinkActive="list-item-active"
+        [routerLink]="['/dashboard/company/payroll']"
+        (click)="onItemSelected()"
+      >
+        <mat-icon matListIcon>receipt</mat-icon> Payroll Details
+      </a>
+    </mat-nav-list>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel class="mat-elevation-z0">
+    <mat-expansion-panel-header>
+      Employee
+    </mat-expansion-panel-header>
+
+    <mat-nav-list>
+      <!-- <h2 matSubheader>Dashboard Menu</h2>
+      <mat-divider></mat-divider> -->
+      <a
+        mat-list-item
+        routerLinkActive="list-item-active"
+        [routerLink]="['/dashboard/employee']"
+        (click)="onItemSelected()"
+      >
+        <mat-icon matListIcon>group</mat-icon> Manage Employees
+      </a>
+    </mat-nav-list>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel class="mat-elevation-z0">
+    <mat-expansion-panel-header>
+      Upload
+    </mat-expansion-panel-header>
+
+    <mat-nav-list>
+      <!-- <h2 matSubheader>Dashboard Menu</h2>
+      <mat-divider></mat-divider> -->
+      <a
+        mat-list-item
+        routerLinkActive="list-item-active"
+        [routerLink]="['/dashboard/upload']"
+        (click)="onItemSelected()"
+      >
+        <mat-icon matListIcon>cloud_upload</mat-icon> File Upload
+      </a>
+    </mat-nav-list>
+  </mat-expansion-panel>
+</mat-accordion>
