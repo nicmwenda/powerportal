@@ -6,6 +6,8 @@ const routes: Routes = [
   {
     path: 'auth',
     component: PublicComponent,
+    loadChildren: () =>
+      import('../../auth/auth.module').then((m) => m.AuthModule),
   },
 ];
 

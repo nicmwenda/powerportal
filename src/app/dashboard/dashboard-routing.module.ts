@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'overview',
+    pathMatch: 'full',
+  },
   {
     path: 'overview',
     loadChildren: () =>
@@ -21,6 +27,10 @@ const routes: Routes = [
     path: 'upload',
     loadChildren: () =>
       import('./upload/upload.module').then((m) => m.UploadModule),
+  },
+  {
+    path: '**',
+    component: ErrorComponent,
   },
 ];
 
