@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
+import { Employee } from './employee.model';
+import { ELEMENT_DATA } from './employee.data';
 
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html',
-  styleUrls: ['./employee.component.scss']
+  styleUrls: ['./employee.component.scss'],
 })
 export class EmployeeComponent implements OnInit {
+  displayedColumns: string[] = ['userId', 'status', 'firstName', 'middleName'];
+  dataSource = new MatTableDataSource<Employee>(ELEMENT_DATA);
 
-  constructor() { }
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.dataSource.paginator = this.paginator;
   }
-
 }
