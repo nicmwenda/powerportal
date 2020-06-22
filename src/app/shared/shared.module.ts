@@ -46,6 +46,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { SidebarService } from './sidebar/sidebar.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const mm = [
   MatAutocompleteModule,
@@ -85,7 +86,13 @@ const mm = [
 ];
 
 @NgModule({
-  imports: [CommonModule, ...mm, FlexLayoutModule, RouterModule],
+  imports: [
+    CommonModule,
+    ...mm,
+    ReactiveFormsModule,
+    FlexLayoutModule,
+    RouterModule,
+  ],
   exports: [...mm, HeaderComponent, SidebarComponent, FooterComponent],
   providers: [SidebarService],
   declarations: [HeaderComponent, SidebarComponent, FooterComponent],

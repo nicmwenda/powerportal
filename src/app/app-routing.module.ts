@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ErrorComponent } from './dashboard/error/error.component';
+import { AuthGuardService } from './auth/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -12,6 +13,7 @@ const routes: Routes = [
     path: '',
     loadChildren: () =>
       import('./layouts/private/private.module').then((m) => m.PrivateModule),
+    canActivate: [AuthGuardService],
   },
   {
     path: '',
