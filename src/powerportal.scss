@@ -1,0 +1,200 @@
+// Custom Theming for Power
+
+@import "~@angular/material/theming";
+@include mat-core();
+
+//Setup Power Theme Colours
+$powerportal-primary: mat-palette($mat-pink);
+$powerportal-accent: mat-palette($mat-indigo);
+$powerportal-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$powerportal-theme: mat-light-theme(
+  $powerportal-primary,
+  $powerportal-accent,
+  $powerportal-warn
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($powerportal-theme);
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-Regular.woff2") format("woff2"),
+    url("assets/fonts/SFProDisplay-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-ThinItalic.woff2") format("woff2"),
+    url("assets/fonts/SFProDisplay-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-BoldItalic.woff2") format("woff2"),
+    url("assets/fonts/SFProDisplay-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-Medium.woff2") format("woff2"),
+    url("assets/fonts/SFProDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-Black.woff2") format("woff2"),
+    url("assets/fonts/SFProDisplay-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-Bold.woff2") format("woff2"),
+    url("assets/fonts/SFProDisplay-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-Thin.woff2") format("woff2"),
+    url("assets/fonts/SFProDisplay-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-UltralightItalic.woff2") format("woff2"),
+    url("assets/fonts/SFProDisplay-UltralightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-BlackItalic.woff2") format("woff2"),
+    url("assets/fonts/SFProDisplay-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-Light.woff2") format("woff2"),
+    url("assets/fonts/SFProDisplay-Light.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-SemiboldItalic.woff2") format("woff2"),
+    url("assets/fonts/SFProDisplay-SemiboldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-Semibold.woff2") format("woff2"),
+    url("assets/fonts/SFProDisplay-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-Heavy.woff2") format("woff2"),
+    url("assets/fonts/SFProDisplay-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-LightItalic.woff2") format("woff2"),
+    url("assets/fonts/SFProDisplay-LightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-MediumItalic.woff2") format("woff2"),
+    url("assets/fonts/SFProDisplay-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-Ultralight.woff2") format("woff2"),
+    url("assets/fonts/SFProDisplay-Ultralight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-HeavyItalic.woff2") format("woff2"),
+    url("assets/fonts/SFProDisplay-HeavyItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-RegularItalic.woff2") format("woff2"),
+    url("assets/fonts/SFProDisplay-RegularItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+// Setup Power Fonts.
+$powerportal-typography: mat-typography-config(
+  $font-family: "SF Pro Display, Roboto, Helvetica Neue, sans-serif",
+);
+
+@include angular-material-typography($powerportal-typography);
+
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
