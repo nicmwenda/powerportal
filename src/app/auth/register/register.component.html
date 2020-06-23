@@ -1,5 +1,9 @@
 <mat-card>
-  <mat-card-title>Register</mat-card-title>
+  <mat-card-title>
+    <div class="navbar-brand">
+      <img src="assets/imgs/power-logo-full.png" width="150" />
+    </div>
+  </mat-card-title>
   <mat-card-content>
     <form [formGroup]="form" (ngSubmit)="submit()">
       <p>
@@ -50,11 +54,16 @@
       </p>
 
       <div class="button">
-        <button type="submit" mat-button>
+        <button type="submit" mat-raised-button color="primary">
           Register
         </button>
 
-        <button type="button" [routerLink]="['../login']" mat-button>
+        <button
+          type="button"
+          [routerLink]="['../login']"
+          mat-raised-button
+          color="accent"
+        >
           Login
         </button>
       </div>
