@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./private.component.scss'],
 })
 export class PrivateComponent implements OnInit {
-  sidebarOpen: Boolean = false;
+  sidebarOpen: Boolean = true;
 
   constructor() {}
 

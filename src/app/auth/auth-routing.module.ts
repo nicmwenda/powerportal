@@ -9,12 +9,13 @@ import { ErrorComponent } from '../dashboard/error/error.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'landing',
+    redirectTo: 'login',
     pathMatch: 'full',
   },
   {
     path: 'landing',
-    component: LandingComponent,
+    redirectTo: 'login',
+    pathMatch: 'full',
   },
   {
     path: 'login',

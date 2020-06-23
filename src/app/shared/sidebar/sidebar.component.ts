@@ -12,6 +12,11 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {}
 
   onItemSelected() {
-    this.sidebar.close();
+    let innerWidth = window.innerWidth;
+
+    console.log(innerWidth);
+    if (innerWidth <= 600) {
+      this.sidebar.close();
+    }
   }
 }
