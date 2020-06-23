@@ -3,7 +3,12 @@
     <button mat-icon-button (click)="toggleSidebar()">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>Power</span>
+    <!-- <span>Power</span> --><!-- logo -->
+    <div class="navbar-brand">
+      <a [routerLink]="['/dashboard']">
+        <img src="assets/imgs/power-logo-white.png" width="50" />
+      </a>
+    </div>
     <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
       <ul fxLayout="row" fxLayoutGap="20px">
         <li>

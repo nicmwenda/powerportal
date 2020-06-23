@@ -14,8 +14,22 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+
+    <style>
+      #loading {
+        background: url("assets/imgs/loader-white.gif") no-repeat center center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 9999999;
+      }
+    </style>
   </head>
   <body class="mat-typography">
-    <app-root>Loading</app-root>
+    <app-root>
+      <div id="loading"></div>
+    </app-root>
   </body>
 </html>
