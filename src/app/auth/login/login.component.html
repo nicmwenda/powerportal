@@ -7,8 +7,8 @@
           <input
             type="text"
             matInput
-            placeholder="Username"
-            formControlName="username"
+            placeholder="Email"
+            formControlName="email"
           />
         </mat-form-field>
       </p>
@@ -24,14 +24,25 @@
         </mat-form-field>
       </p>
 
-      <p *ngIf="error" class="error">
-        {{ error }}
+      <p *ngIf="error.status" class="error">
+        {{ error.message }}
       </p>
 
       <div class="button">
-        <button type="submit" mat-button>Login</button>
-        <button type="button" mat-button [routerLink]="['../register']">
+        <button type="submit" mat-raised-button color="primary">Login</button>
+        <button
+          type="button"
+          mat-raised-button
+          color="accent"
+          [routerLink]="['../register']"
+        >
           Register
+        </button>
+      </div>
+
+      <div class="button">
+        <button type="button" mat-button (click)="loginGoogle()">
+          Google
         </button>
       </div>
     </form>

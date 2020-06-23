@@ -1,6 +1,7 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,21 +9,55 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  constructor(public authService: AuthService) {}
+  error = {
+    status: false,
+    message: '',
+  };
+  constructor(public authService: AuthService, public router: Router) {}
 
   ngOnInit(): void {}
 
   form: FormGroup = new FormGroup({
-    username: new FormControl(''),
-    password: new FormControl(''),
+    email: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required),
   });
 
+  loginGoogle() {
+    this.authService
+      .googleSignin()
+      .then((success) => {
+        this.router.navigate(['/dashboard']);
+      })
+      .catch((err) => {
+        this.error = {
+          status: true,
+          message: err.message,
+        };
+
+        console.log(err.message);
+      });
+  }
+
   submit() {
+    let credentials = {
+      email: this.form.controls.email.value,
+      password: this.form.controls.password.value,
+    };
     if (this.form.valid) {
-      this.submitEM.emit(this.form.value);
+      this.authService
+        .emailSignin(credentials)
+        .then((result) => {
+          console.log(result);
+          this.router.navigate(['/dashboard']);
+        })
+        .catch((err) => {
+          this.error = {
+            status: true,
+            message: err.message,
+          };
+
+          console.log(err.message);
+        });
     }
   }
-  @Input() error: string | null;
-
-  @Output() submitEM = new EventEmitter();
 }

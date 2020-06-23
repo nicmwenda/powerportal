@@ -5,6 +5,16 @@
       <p>
         <mat-form-field>
           <input
+            type="email"
+            matInput
+            placeholder="Email"
+            formControlName="email"
+          />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <input
             type="text"
             matInput
             placeholder="Username"
@@ -35,15 +45,22 @@
         </mat-form-field>
       </p>
 
-      <p *ngIf="error" class="error">
-        {{ error }}
+      <p *ngIf="error.status" class="error">
+        {{ error.message }}
       </p>
 
       <div class="button">
-        <button type="submit" mat-button>Register</button>
+        <button type="submit" mat-button>
+          Register
+        </button>
 
         <button type="button" [routerLink]="['../login']" mat-button>
           Login
+        </button>
+      </div>
+      <div class="button">
+        <button type="button" mat-button (click)="registerGoogle()">
+          Google
         </button>
       </div>
     </form>
